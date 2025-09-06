@@ -1,1 +1,175 @@
-# mypage11
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2025년 버킷리스트</title>
+  <!-- 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <!-- 아이콘 (Font Awesome) -->
+  <script src="https://kit.fontawesome.com/2d323a629b.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Jua', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #f9d423, #ff4e50, #36d1dc, #5b86e5);
+      background-size: 400% 400%;
+      animation: gradientBG 12s ease infinite;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
+      color: #fff;
+    }
+
+    @keyframes gradientBG {
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .title {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+      animation: fadeDown 1.5s ease;
+    }
+
+    .msg {
+      font-size: 22px;
+      margin-bottom: 30px;
+      opacity: 0.9;
+      animation: fadeDown 2s ease;
+    }
+
+    .bucket-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .bucket {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      border-radius: 20px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bucket:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
+    }
+
+    /* 아이콘 */
+    .bucket i {
+      font-size: 28px;
+      margin-bottom: 10px;
+      animation: pop 1.2s infinite alternate;
+    }
+
+    /* 각 카드 색상 */
+    .red {
+      background: linear-gradient(135deg, #ff4e50, #f9d423);
+    }
+
+    .blue {
+      background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    }
+
+    .green {
+      background: linear-gradient(135deg, #56ab2f, #a8e063);
+    }
+
+    .purple {
+      background: linear-gradient(135deg, #a18cd1, #fbc2eb);
+    }
+
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes pop {
+      from {
+        transform: scale(1);
+      }
+
+      to {
+        transform: scale(1.2);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="title">🌟 2025년 하반기계획 🌟</h1>
+  <p class="msg">버티자</p>
+
+  <div class="bucket-list">
+    <div class="bucket red">
+      <i class="fa-solid fa-language"></i>
+      어학 꾸준히
+    </div>
+    <div class="bucket blue">
+      <i class="fa-solid fa-pen-nib"></i>
+      주 1회 1권 독서
+    </div>
+    <div class="bucket green">
+      <i class="fa-solid fa-dumbbell"></i>
+      주 3회 운동
+    </div>
+    <div class="bucket purple">
+      <i class="fa-solid fa-book"></i>
+      영양제 챙기기
+    </div>
+    <div class="bucket red">
+      <i class="fa-solid fa-hands-holding-heart"></i>
+      도서관에서 살기
+    </div>
+    <div class="bucket blue">
+      <i class="fa-solid fa-laptop-code"></i>
+      데이터분석 자격증 취득
+    </div>
+  </div>
+</body>
+
+</html>
