@@ -87,19 +87,19 @@
       overflow: hidden;
     }
 
-    .bucket:hover {
+    .bucket: hover {
       transform: translateY(-10px) scale(1.05);
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4);
     }
 
-    /* 아이콘 */
+    /아이콘/
     .bucket i {
       font-size: 28px;
       margin-bottom: 10px;
       animation: pop 1.2s infinite alternate;
     }
 
-    /* 각 카드 색상 */
+    /각 카드 색상/
     .red {
       background: linear-gradient(135deg, #ff4e50, #f9d423);
     }
